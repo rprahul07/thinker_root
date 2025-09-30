@@ -14,7 +14,7 @@ import { uploadApplicationFiles } from "../middlewares/upload.js";
 router.post("/", uploadApplicationFiles, createApplication);
 
 // Admin: CRUD
-// router.get("/count", getApplicationCount);
+router.get("/count", getApplicationCount);
 // router.get("/", getAllApplications);
 // router.get("/:id", getApplicationById);
 // router.put("/:id", updateApplication);
