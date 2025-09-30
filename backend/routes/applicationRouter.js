@@ -14,10 +14,10 @@ import { uploadApplicationFiles } from "../middlewares/upload.js";
 router.post("/", uploadApplicationFiles, createApplication);
 
 // Admin: CRUD
-router.get("/count", getApplicationCount);
-router.get("/", getAllApplications);
-router.get("/:id", getApplicationById);
-router.put("/:id", updateApplication);
-router.delete("/:id", deleteApplication);
+// router.get("/count", getApplicationCount);
+// router.get("/", getAllApplications);
+// router.get("/:id", getApplicationById);
+// router.put("/:id", updateApplication);
+// router.delete("/:id", deleteApplication);
 
 export default router;

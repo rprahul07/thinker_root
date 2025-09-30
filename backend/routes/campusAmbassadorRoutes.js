@@ -12,9 +12,9 @@ import {
 router.post("/", createCampusAmbassador);
 
 // 📌 Admin/Private routes
-router.get("/", getAllCampusAmbassadors);
-router.get("/:id", getCampusAmbassadorById);
-router.put("/:id", updateCampusAmbassador);
-router.delete("/:id", deleteCampusAmbassador);
+// router.get("/", getAllCampusAmbassadors);
+// router.get("/:id", getCampusAmbassadorById);
+// router.put("/:id", updateCampusAmbassador);
+// router.delete("/:id", deleteCampusAmbassador);
 
 export default router;
