@@ -10,6 +10,7 @@ export const createCampusAmbassador = async (req, res) => {
       data: ambassador,
     });
   } catch (error) {
+    console.error("Error creating Campus Ambassador:", error);
     res.status(400).json({ success: false, error: error.message });
   }
 };
@@ -20,6 +21,7 @@ export const getAllCampusAmbassadors = async (req, res) => {
     const ambassadors = await CampusAmbassador.findAll();
     res.status(200).json({ success: true, data: ambassadors });
   } catch (error) {
+    console.error("Error fetching Campus Ambassadors:", error);
     res.status(500).json({ success: false, error: error.message });
   }
 };
@@ -33,6 +35,7 @@ export const getCampusAmbassadorById = async (req, res) => {
     }
     res.status(200).json({ success: true, data: ambassador });
   } catch (error) {
+    console.error(`Error fetching Campus Ambassador with ID ${req.params.id}:`, error);
     res.status(500).json({ success: false, error: error.message });
   }
 };
@@ -47,6 +50,7 @@ export const updateCampusAmbassador = async (req, res) => {
     await ambassador.update(req.body);
     res.status(200).json({ success: true, message: "Application updated", data: ambassador });
   } catch (error) {
+    console.error(`Error updating Campus Ambassador with ID ${req.params.id}:`, error);
     res.status(400).json({ success: false, error: error.message });
   }
 };
@@ -61,6 +65,7 @@ export const deleteCampusAmbassador = async (req, res) => {
     await ambassador.destroy();
     res.status(200).json({ success: true, message: "Application deleted" });
   } catch (error) {
+    console.error(`Error deleting Campus Ambassador with ID ${req.params.id}:`, error);
     res.status(500).json({ success: false, error: error.message });
   }
 };
